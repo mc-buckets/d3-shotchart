@@ -2,6 +2,8 @@
 
 Basketball fans are paying attention to stats and advanced metrics more than ever. There exists few open source tools to help facilitate the display and distribution of the data fans care about. With d3-shotchart, you can easily build a visualization that enables fans to interact with NBA shot data (publicly available elsewhere).
 
+[<img alt="NBA Shotcharts" src="https://gist.githubusercontent.com/mamcmanus/c5cfffeee48c51343405b2e66f388d7c/raw/3d27381ece8d08a4c0fd263e18ee89990392f16b/preview.png" width="420" />](http://bl.ocks.org/mamcmanus/c5cfffeee48c51343405b2e66f388d7c)
+
 ## Installing
 
 If you use NPM, `npm install d3-shotchart`. Otherwise, download the [latest release](https://github.com/d3/d3-shotchart/releases/latest).
