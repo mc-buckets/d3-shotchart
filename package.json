@@ -1,0 +1,41 @@
+{
+  "name": "d3-shotchart",
+  "version": "0.0.1",
+  "author": "Matt McManus <matt.a.mcmanus@gmail.com> (https://mamcmanus.com)",
+  "description": "d3-shotchart is a plugin for easily visualizing basketball shotchart data in a fun, interactive way",
+  "keywords": [
+    "d3",
+    "d3-module",
+    "NBA shot chart",
+    "shot chart",
+    "D3 shot charts",
+    "D3 NBA",
+    "basketball",
+    "basketball shot charts",
+    "NBA",
+    "NCAA basketball"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "build/d3-shotchart.js",
+  "jsnext:main": "index",
+  "homepage": "https://github.com/mamcmanus/d3-shotchart",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mamcmanus/d3-shotchart.git"
+  },
+  "scripts": {
+    "pretest": "rm -rf build && mkdir build && rollup -g d3-hexbin:d3,d3-tip:d3 -f umd -n d3 -o build/d3-shotchart.js -- index.js",
+    "test": "tape 'test/**/*-test.js'",
+    "prepublish": "npm run test && uglifyjs build/d3-shotchart.js -c -m -o build/d3-shotchart.min.js",
+    "postpublish": "zip -j build/d3-shotchart.zip -- LICENSE README.md build/d3-shotchart.js build/d3-shotchart.min.js"
+  },
+  "dependencies": {
+    "d3-hexbin": "v0.2",
+    "d3-tip": "0.7.1"
+  },
+  "devDependencies": {
+    "rollup": "0.27",
+    "tape": "4",
+    "uglify-js": "2"
+  }
+}
